@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@syncfusion/ej2-base':
+        specifier: ^25.2.7
+        version: 25.2.7
+      '@syncfusion/ej2-vue-layouts':
+        specifier: ^25.2.3
+        version: 25.2.3
       nuxt:
         specifier: ^3.11.2
         version: 3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
@@ -992,6 +998,22 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
+
+  '@syncfusion/ej2-base@25.2.7':
+    resolution: {integrity: sha512-sbZ8IVEg4UkD5wXV3GXLyoH6q4sYpCVP3HJ1FwlJ+/+rgAQ2h7NaQhBmljg0o+ZfXEB7UuIZ59AzNQqc0eL6Eg==}
+    hasBin: true
+
+  '@syncfusion/ej2-icons@25.2.3':
+    resolution: {integrity: sha512-WptrAR3YShA8S+mushGCojRmBgLUCYpsYq1Nw1S1ynWNRcijlZgdil5L7LjaGA8H6CA/mFG5BMBDCmZ76hYX1A==}
+
+  '@syncfusion/ej2-layouts@25.2.3':
+    resolution: {integrity: sha512-n0M5IirG4/ciFYdCF/KSD1vprInm2F25vEP/Rrxbkl6DhEVsYbdMMR8rNwuNhlLGvgmguBH6i9A9dlNoZbV4Bw==}
+
+  '@syncfusion/ej2-vue-base@25.2.4':
+    resolution: {integrity: sha512-dngL7QId0nPvLl9OTIHYxt0Po9jHE+bt3BaWZk0E3fGv+o1v2gMr752tBWpPnvNMoaEAyFOxNl4afYIvbgpTUA==}
+
+  '@syncfusion/ej2-vue-layouts@25.2.3':
+    resolution: {integrity: sha512-jkw/a5Msg6TKM5XHj+krO59mW03A9uAOYEzXvrK4taLXczS0Sif4qUnXe3S/TnEl3JAzffJiFnwzNg3fWXbs4w==}
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -4803,6 +4825,26 @@ snapshots:
       '@sigstore/protobuf-specs': 0.3.2
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@syncfusion/ej2-base@25.2.7':
+    dependencies:
+      '@syncfusion/ej2-icons': 25.2.3
+
+  '@syncfusion/ej2-icons@25.2.3': {}
+
+  '@syncfusion/ej2-layouts@25.2.3':
+    dependencies:
+      '@syncfusion/ej2-base': 25.2.7
+
+  '@syncfusion/ej2-vue-base@25.2.4':
+    dependencies:
+      '@syncfusion/ej2-base': 25.2.7
+
+  '@syncfusion/ej2-vue-layouts@25.2.3':
+    dependencies:
+      '@syncfusion/ej2-base': 25.2.7
+      '@syncfusion/ej2-layouts': 25.2.3
+      '@syncfusion/ej2-vue-base': 25.2.4
 
   '@trysound/sax@0.2.0': {}
 
