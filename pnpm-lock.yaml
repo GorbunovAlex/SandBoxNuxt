@@ -8,21 +8,58 @@ importers:
 
   .:
     dependencies:
-      '@syncfusion/ej2-base':
-        specifier: ^25.2.7
-        version: 25.2.7
-      '@syncfusion/ej2-vue-layouts':
-        specifier: ^25.2.3
-        version: 25.2.3
       nuxt:
         specifier: ^3.11.2
-        version: 3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
+        version: 3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
       vue:
         specifier: ^3.4.27
         version: 3.4.27
       vue-router:
         specifier: ^4.3.2
         version: 4.3.3(vue@3.4.27)
+    devDependencies:
+      '@syncfusion/ej2':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-base':
+        specifier: ^25.2.7
+        version: 25.2.7
+      '@syncfusion/ej2-data':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-grids':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-vue-buttons':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-vue-calendars':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-vue-dropdowns':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-vue-grids':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-vue-layouts':
+        specifier: ^25.2.3
+        version: 25.2.3
+      '@syncfusion/ej2-vue-popups':
+        specifier: ^26.1.35
+        version: 26.1.35
+      '@syncfusion/ej2-vue-splitbuttons':
+        specifier: ^26.1.35
+        version: 26.1.35
+      axios:
+        specifier: ^1.7.2
+        version: 1.7.2
+      better-sqlite3:
+        specifier: ^11.0.0
+        version: 11.0.0
+      floating-vue:
+        specifier: ^5.2.2
+        version: 5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27)
 
 packages:
 
@@ -999,21 +1036,184 @@ packages:
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
 
+  '@syncfusion/ej2-barcode-generator@26.1.35':
+    resolution: {integrity: sha512-rkikOHb+XAAVoJdv40k5V6HvOvhchdvztaRzPZRNFurjhkqw71DZ85zToasyQk3gn018ih0FRs3gZSfLbJuLLA==}
+
   '@syncfusion/ej2-base@25.2.7':
     resolution: {integrity: sha512-sbZ8IVEg4UkD5wXV3GXLyoH6q4sYpCVP3HJ1FwlJ+/+rgAQ2h7NaQhBmljg0o+ZfXEB7UuIZ59AzNQqc0eL6Eg==}
     hasBin: true
 
+  '@syncfusion/ej2-base@26.1.35':
+    resolution: {integrity: sha512-h+qm8JmP6mCA2S/fe7h5l/fqy37mwvqjeQJyL2sZtLGBVKkg3rlQZmTjASPnzVIeMfLrwkyOid+VIAwZgINS3g==}
+    hasBin: true
+
+  '@syncfusion/ej2-buttons@26.1.35':
+    resolution: {integrity: sha512-NfJHzI5GuAjyttM2QS3rdbG03miOcIZ+pgbiIptBuo0d8oe5k7iOTAGLfN+y084qo6ZvTiNlE07UbqDb6Lko2w==}
+
+  '@syncfusion/ej2-calendars@26.1.35':
+    resolution: {integrity: sha512-gViPsHPC+Y81yLVtoMlSHH1AhIHWxGnjF9YGR5SaQnq7hJBF6MiAC38cH4oDMkOfJ1K+tgCPTTNqNLBEFpSEsw==}
+
+  '@syncfusion/ej2-charts@26.1.35':
+    resolution: {integrity: sha512-DNUoipZtl5Cg/EA4VzgE7WFXrCrbMGLzoHVjv/ZFWCwKhgdhrD+ZBLa+sj0gU011xAn/bCzj1bLPnpOB3OiH1g==}
+
+  '@syncfusion/ej2-circulargauge@26.1.35':
+    resolution: {integrity: sha512-gQe3nmJrwlmwSJba+DHe8S3iQYJfRYQLwCMCwVAxKbHy0oFsameSP3VTzKNdk0HOniDiNBGqKb6tQkCOM30JIw==}
+
+  '@syncfusion/ej2-compression@26.1.35':
+    resolution: {integrity: sha512-gTWqnDC3321mLaUE/T1LfdZ+Pu5NhY7Y7GlOX3Q1lqWKqE9BQDaIkZx31TqtmwwCQ35i/ZOFdg0F93Kb3PM8dA==}
+
+  '@syncfusion/ej2-data@26.1.35':
+    resolution: {integrity: sha512-dlg+Ag+7lvU1wrfAtSF1pHABIC7PyD5RsAI5ju1io00z3cxfuoY6ctGamHLx2IYTDdM3q5WaPB13dayTBjuU4g==}
+
+  '@syncfusion/ej2-diagrams@26.1.35':
+    resolution: {integrity: sha512-k++C7qTVX2Yu0vidy5LG339g2DWYWfBOoLBuhUcFqXflFxrPpvxB44Pls0IOwFu0mMJS4Vbf6P5WdKUw0z2DZA==}
+
+  '@syncfusion/ej2-documenteditor@26.1.35':
+    resolution: {integrity: sha512-8/c8weQzCsHSEeRcFRocmY+m81yXznJXMr5WJA6aKf8XYt4qSYDo/U7pfMBkjnNByJF4GpooGWx46wbGaWA2DQ==}
+
+  '@syncfusion/ej2-drawings@26.1.35':
+    resolution: {integrity: sha512-e8Qbejk3H8JH4ZZk1mAlP+pnlqt2Ln65lNpkpwiZD6JyqFEU4URO3LKvo8+Yl1QC9a8bLiWDb37N91MWS1qhHA==}
+
+  '@syncfusion/ej2-dropdowns@26.1.35':
+    resolution: {integrity: sha512-Y5IQphVob5+DGT+UZ/VfB6dF5pXgUp+/tK6bT+OvefmaDf3S4vcyTOqnJwRTcI8I6nn8M+BbryMUePPrH/DNTQ==}
+
+  '@syncfusion/ej2-excel-export@26.1.35':
+    resolution: {integrity: sha512-AlFYEBI97I0zjzGrVlqu18mux7TH6l7bSXNdWbjMf961tMSh/TkqjxkbsIWdUjqKz5M/6Vy7ElsnkjDGN1emIA==}
+
+  '@syncfusion/ej2-file-utils@26.1.35':
+    resolution: {integrity: sha512-0aeFbfs1kL/UV/LV+jFeuY/63dN0N4z5xU7mhD+7W4wFyXH9S60rfgE/UawC+UFJAT7H+TrGdOGQ3ZfacQTEmQ==}
+
+  '@syncfusion/ej2-filemanager@26.1.35':
+    resolution: {integrity: sha512-18gOxWwZlYTiELHuV9sCH7vNzvjvFCI6SrswOH5APSxdtZBrCsxhES/FxjAUlAIvq+aXKZOW5bbEJRK/y7bcQQ==}
+
+  '@syncfusion/ej2-gantt@26.1.35':
+    resolution: {integrity: sha512-V/B/h9xLwOufea9r6lOZ2ZjvnwzTwE6zHgv4BCiDC+iROCeTpp4DSgJ1Vgo72iR6JevjjLm1q7EkEqOilvpKYw==}
+
+  '@syncfusion/ej2-grids@26.1.35':
+    resolution: {integrity: sha512-Hkj8f1oRdL3QSoJBP7wIxBLQjQIKSm3/Vyylo4aLQWDAlz3DpiwKzSAmWwMexQpe8oQs8lUZ7mQuxQUy/kh5qw==}
+
+  '@syncfusion/ej2-heatmap@26.1.35':
+    resolution: {integrity: sha512-COYj6QjVu/2JlXVScAj1KF6tOKyYFTYg9swPSoSiByCLAcR4lAqe3EcYmF9+kFxDY0uSVJ2ScIQOjk6e35fnyA==}
+
   '@syncfusion/ej2-icons@25.2.3':
     resolution: {integrity: sha512-WptrAR3YShA8S+mushGCojRmBgLUCYpsYq1Nw1S1ynWNRcijlZgdil5L7LjaGA8H6CA/mFG5BMBDCmZ76hYX1A==}
+
+  '@syncfusion/ej2-icons@26.1.35':
+    resolution: {integrity: sha512-rhaJDhN+vDBai+7xSw+xMnzAvLtG75vYoWvVA7wgUawA4boA4ODtkEgNYbMPJOEbtYaEQO7s3b7nzzWbXI3v+Q==}
+
+  '@syncfusion/ej2-image-editor@26.1.35':
+    resolution: {integrity: sha512-tGwzHO6mrYOWXi8NbnGdXEYJmywagctDveqYeUZj+LWhul+4AC3TiM3cWF5+e3wJ7ZgCEtfzKHzQvQ8Ri1bcng==}
+
+  '@syncfusion/ej2-inplace-editor@26.1.35':
+    resolution: {integrity: sha512-MSRD8ANzGjt0Hz6ZuE0pG9kNdlj74wE2/JqWIdtza74CyILoXNS250oPqIwZLnAf3PYaMr/0jvVzbeVLvMnhjg==}
+
+  '@syncfusion/ej2-inputs@26.1.35':
+    resolution: {integrity: sha512-VxR7N0rSrS66NOE805Pc4iDzPnyL01I3puakMFMhE6lxkg4nlbLPOXcEY/janZxTuQXLDmWWmmnlGL3KYVN+gw==}
+
+  '@syncfusion/ej2-kanban@26.1.35':
+    resolution: {integrity: sha512-/tPxaDZ13siszpQunN3JL0/QgqjLBQV6z8A4Sv5UCmNjh6O0f/DVmkl8d+a2IBUTAJhShvkFCx0QoktMfzsSFw==}
 
   '@syncfusion/ej2-layouts@25.2.3':
     resolution: {integrity: sha512-n0M5IirG4/ciFYdCF/KSD1vprInm2F25vEP/Rrxbkl6DhEVsYbdMMR8rNwuNhlLGvgmguBH6i9A9dlNoZbV4Bw==}
 
+  '@syncfusion/ej2-layouts@26.1.35':
+    resolution: {integrity: sha512-FlpHIchLmPkTzs85BjTcsEIFfZ6A8DT92nveRqm1f2ZJFtJW7CDeoVTKRKb3speBgMe17Wl4IVfKWElp6ItY+g==}
+
+  '@syncfusion/ej2-lineargauge@26.1.35':
+    resolution: {integrity: sha512-w0YR1Lk7gxndCL/1WUqlNSMAqE9i/HzfnUVX1wgmpwBFY4IyUWWuFypT/a9CQ5tGp9VusuAbb6l7W9FEjqZAeA==}
+
+  '@syncfusion/ej2-lists@26.1.35':
+    resolution: {integrity: sha512-XVLm+u11+63dpudZVrgrocK/DihYyAq9jTamfKQ1HkAV27gPTyilV+6ywizGmZmSystgMB+0YBKRDjqv85D1+A==}
+
+  '@syncfusion/ej2-maps@26.1.35':
+    resolution: {integrity: sha512-ZQeXjCp+Q8Z09gM4fTrueeQwGG5PuzYfIGZxu84olJfPucwy73V4tTkyT6Kakh7WMN0zkM1NtQmkkC/c5AFzQw==}
+
+  '@syncfusion/ej2-multicolumn-combobox@26.1.35':
+    resolution: {integrity: sha512-8iQsN+fNnEoYa75QpJNN0jcOOVDfpNd1/03/AWIFN8DL/FuT+pqcOG9DVNqYCV3qv7vWbgHnm0m6fjIKHQ8gBQ==}
+
+  '@syncfusion/ej2-navigations@26.1.35':
+    resolution: {integrity: sha512-Of8XARkcCydkiJXNEwEffUW7eSlxf782w845hQ0H+v+XyDBXM4YOn8buQ555yH8AJVNow6sZTocBMLIfikqn9g==}
+
+  '@syncfusion/ej2-notifications@26.1.35':
+    resolution: {integrity: sha512-R8r1Wbfo2saM/jqbPmCfuZ9Y1Uq6QCjjEQkSzz8fSA/slddutl67RfVWCbjg9aTGx64sQctXHO7r3GjFqfPUjQ==}
+
+  '@syncfusion/ej2-office-chart@26.1.35':
+    resolution: {integrity: sha512-MJPTp2DPtmoBHeKrXsGb8xjSC5k/ycY0Drc+b5a4oL63TwqyyXb2u+sMuzDzYIzJVn9Kzqosl6Jj3Y3EFY7O5Q==}
+
+  '@syncfusion/ej2-pdf-export@26.1.35':
+    resolution: {integrity: sha512-oGUGHR0x5Z/M3w4VXqfx75rZSuqeIzqsas4YCV3r0gFFn2Vj1m9OqTTgoTZaSuF6SFqiq4Jgoivai7LE/16lsw==}
+
+  '@syncfusion/ej2-pdf@26.1.35':
+    resolution: {integrity: sha512-344HlHPGmOYcvuEAQy89ZpSYCcyU3SxHCV0wOSTPHaGoIPxtTxaFLIyDU9J/LUOPc187kOYzOH/mRhBKwabkwg==}
+
+  '@syncfusion/ej2-pdfviewer@26.1.35':
+    resolution: {integrity: sha512-/Cm8JGQ6dnVSUxdIqKAReK32W5CNWXXEzYv0ZtMXB9IQC7xE0gHlln0UZX7OILAo6rGQQtu6urTl1FHqFJKSdQ==}
+
+  '@syncfusion/ej2-pivotview@26.1.35':
+    resolution: {integrity: sha512-R1h38hgw5n3tP8YOtUsqHGdjB2+BTKEA+R9UOOvDP/KFiRUOC+fMV5fddsqfKF9jtro1c/LAi0450cXiZ0POIw==}
+
+  '@syncfusion/ej2-popups@26.1.35':
+    resolution: {integrity: sha512-mSODpl8SBpctspUKDR8qJeNiiyC0cx2nhSW3SA9VYOfayT8O+ojlOW+2Qg5q0OHNJselya+xx5lc5QXjP1f1NA==}
+
+  '@syncfusion/ej2-progressbar@26.1.35':
+    resolution: {integrity: sha512-DTYtOV8EwyHoR7vbCw/yvvzE6WZiX81RWeaFVNcJnczd2r3tpa8QZIkuiAMN3aiobNmfnfOK5dad2MjTOGQdmQ==}
+
+  '@syncfusion/ej2-querybuilder@26.1.35':
+    resolution: {integrity: sha512-1N2MvXREDNw1pz7NR265Z1Xvx44vJN4gLJZUhznb5RrGyrmCsuaO1hAvy5mQ5oO+8lDge1/NbITyCoWkYpw2NA==}
+
+  '@syncfusion/ej2-ribbon@26.1.35':
+    resolution: {integrity: sha512-u/Cigzky4m6k7I/5g00mBjmaJyvp6d0YtWqvDY8sFjnLI9Eq/rn+AjJqvZkQuNSc2VwRIHqmPCumoZQvTMbZoQ==}
+
+  '@syncfusion/ej2-richtexteditor@26.1.35':
+    resolution: {integrity: sha512-swbmkfyJs8JGLSfymsAmMfWOqwrQYNt94BYPSAmhhlEcSHm3/Xx2ygtzsBmg24ActvJzalD4FZaswpYGplJB3A==}
+
+  '@syncfusion/ej2-schedule@26.1.35':
+    resolution: {integrity: sha512-QVbid5v1xiquYGNly4WgqpcW0iApyKhqB2WZlzKEIhYocjemHBLrXj8R68lOYlF3G/9Cl069E3U40HPreyyyVQ==}
+
+  '@syncfusion/ej2-splitbuttons@26.1.35':
+    resolution: {integrity: sha512-c+iUzD+9rvbriglYzQGJRFAijZ0vRHxnsUNo5whSdDoQCjZnE8avuz/6cJpkY/HyGNIzTpDEayQXB4Z+JgMRqw==}
+
+  '@syncfusion/ej2-spreadsheet@26.1.35':
+    resolution: {integrity: sha512-f3zby/h2jAOUojWrg73/g41PeSOFwgFh5fIZZG3V6zqxUMqclfusD+hWx7LzPScZWmiFvawfK3BqUdA41J9MGg==}
+
+  '@syncfusion/ej2-svg-base@26.1.35':
+    resolution: {integrity: sha512-nE7L0bzHBtJ6WDSsE+TneY3YIcskqxpADhiJcYETPv/uTbZK4BedoiFcVXMChJpQTfUFjiMyC2KPlsQrMhnbUA==}
+
+  '@syncfusion/ej2-treegrid@26.1.35':
+    resolution: {integrity: sha512-AkQL/gVoFInGVAdf5RdN90gL5LhIVGz5Mi9RqijYfZBRGLk7RmWhiHcMeBSppAL3Qiz02+lKAUNpyoA9jmXDIQ==}
+
+  '@syncfusion/ej2-treemap@26.1.35':
+    resolution: {integrity: sha512-+4X6QPyaxV3xgmBanCSqWwXl1Lgzin0tcTm5rZuLB6T9Oy59yPCJq6VpdUiVo46u6zt3eOhPBspJo7GzrdWmpw==}
+
   '@syncfusion/ej2-vue-base@25.2.4':
     resolution: {integrity: sha512-dngL7QId0nPvLl9OTIHYxt0Po9jHE+bt3BaWZk0E3fGv+o1v2gMr752tBWpPnvNMoaEAyFOxNl4afYIvbgpTUA==}
 
+  '@syncfusion/ej2-vue-base@26.1.35':
+    resolution: {integrity: sha512-m3vNeNOH218/BQl50QNhVVCEutxOk5l9O6uZ6KNwJu/2q+fmn5dfmH6Oix+xWlDRg2D3p6/6FZ/CbO8VCCnupw==}
+
+  '@syncfusion/ej2-vue-buttons@26.1.35':
+    resolution: {integrity: sha512-1u0cw8YxenIEj/TRCeFImjRMb1lWEVllj/GNeJpTy7zZ9QlZPGCLMhgfCayi4sgXTnwdooVD6+UYkAEuqpgW8g==}
+
+  '@syncfusion/ej2-vue-calendars@26.1.35':
+    resolution: {integrity: sha512-TLbxDvKIW/qVWPktFvPs7d5CiMiFuPe+6D4GJMwOAKCkm7VAY4Ec08HJWiENtDKnT4Z4eL9VsmB+YkL5UHZvFg==}
+
+  '@syncfusion/ej2-vue-dropdowns@26.1.35':
+    resolution: {integrity: sha512-o41e9uUAewIC7hw5s7ETAhaTJhZHyW6+eJyaVNnXbblMl7z/fWU4oruWkb/oo5HxNXgvsCmePM0o1HrFouF5gw==}
+
+  '@syncfusion/ej2-vue-grids@26.1.35':
+    resolution: {integrity: sha512-Lb11ZWzXiORvWAVefjfs4NpzZO8qLQsXE7W6ivf1/zm/7PUbvWz8NnKaQ/Ty9Wz+z6WseX8w5IOW8ogescV12g==}
+
   '@syncfusion/ej2-vue-layouts@25.2.3':
     resolution: {integrity: sha512-jkw/a5Msg6TKM5XHj+krO59mW03A9uAOYEzXvrK4taLXczS0Sif4qUnXe3S/TnEl3JAzffJiFnwzNg3fWXbs4w==}
+
+  '@syncfusion/ej2-vue-popups@26.1.35':
+    resolution: {integrity: sha512-+ghkQpmiZCThi/FMkzL0MqdCpJDKRSSeuiEgeiRDGF7se02VidFO2q2ZkKoBXLfUwCZNV3UQ5bWuLy0TaQVXVQ==}
+
+  '@syncfusion/ej2-vue-splitbuttons@26.1.35':
+    resolution: {integrity: sha512-P9iDSh4Rbe0a827kDYajZA0N/Hor70ti0j2u0MpkuicgKBrKQv7VwpbURU6dvEPtjoz9us1TzaIMF3360JJjEw==}
+
+  '@syncfusion/ej2@26.1.35':
+    resolution: {integrity: sha512-PFpDBDrfc5sVacitHfqrrpXD5hAhdEoDBMZ7C3pZD9CLfeeAmFyoGcGFpiK+TW5onZTbneIwm60N1Hg7zxPt3Q==}
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -1035,6 +1235,9 @@ packages:
 
   '@types/node@20.14.2':
     resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
+
+  '@types/requirejs@2.1.37':
+    resolution: {integrity: sha512-jmFgr3mwN2NSmtRP6IpZ2nfRS7ufSXuDYQ6YyPFArN8x5dARQcD/DXzT0J6NYbvquVT4pg9K9HWdi6e6DZR9iQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -1400,12 +1603,18 @@ packages:
   async@3.2.5:
     resolution: {integrity: sha512-baNZyqaaLhyLVKm/DlvdW051MSgO6b8eVfIezl9E5PqWxFgzLm/wQntEW4zOytVburDEr0JlALEpdOFwvErLsg==}
 
+  asynckit@0.4.0:
+    resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
+
   autoprefixer@10.4.19:
     resolution: {integrity: sha512-BaENR2+zBZ8xXhM4pUaKUxlVdxZ0EZhjvbopwnXmxRUfqDmwSpC2lAi/QXvx7NRdPCo1WKEcEF6mV64si1z4Ew==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+
+  axios@1.7.2:
+    resolution: {integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==}
 
   b4a@1.6.6:
     resolution: {integrity: sha512-5Tk1HLk6b6ctmjIkAcU/Ujv/1WqiDl0F0JdRCR80VsOcUlHcu7pWeWRlOqQLHfDEsVx9YH/aif5AG4ehoCtTmg==}
@@ -1419,6 +1628,9 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
+  better-sqlite3@11.0.0:
+    resolution: {integrity: sha512-1NnNhmT3EZTsKtofJlMox1jkMxdedILury74PwUbQBjWgo4tL4kf7uTAjU55mgQwjdzqakSTjkf+E1imrFwjnA==}
+
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
@@ -1428,6 +1640,9 @@ packages:
 
   birpc@0.2.17:
     resolution: {integrity: sha512-+hkTxhot+dWsLpp3gia5AkVHIsKlZybNT5gIYiDlNzJrmYPcTM9k5/w2uaj3IPpd7LlEYpmCj4Jj1nC41VhDFg==}
+
+  bl@4.1.0:
+    resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
@@ -1453,6 +1668,9 @@ packages:
 
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
+
+  buffer@5.7.1:
+    resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
 
   buffer@6.0.3:
     resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
@@ -1501,6 +1719,9 @@ packages:
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
+
+  chownr@1.1.4:
+    resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
 
   chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
@@ -1554,6 +1775,10 @@ packages:
 
   colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
+
+  combined-stream@1.0.8:
+    resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
+    engines: {node: '>= 0.8'}
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -1712,6 +1937,14 @@ packages:
       supports-color:
         optional: true
 
+  decompress-response@6.0.0:
+    resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
+    engines: {node: '>=10'}
+
+  deep-extend@0.6.0:
+    resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
+    engines: {node: '>=4.0.0'}
+
   deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
@@ -1734,6 +1967,10 @@ packages:
 
   defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
+
+  delayed-stream@1.0.0:
+    resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
+    engines: {node: '>=0.4.0'}
 
   delegates@1.0.0:
     resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==}
@@ -1815,6 +2052,9 @@ packages:
   encoding@0.1.13:
     resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
 
+  end-of-stream@1.4.4:
+    resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
+
   enhanced-resolve@5.17.0:
     resolution: {integrity: sha512-dwDPwZL0dmye8Txp2gzFmA6sxALaSvdRDjPH0viLcKrtlOL3tw62nWWweVD1SdILDTJrbrL6tdWVN58Wo6U3eA==}
     engines: {node: '>=10.13.0'}
@@ -1888,6 +2128,10 @@ packages:
     resolution: {integrity: sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==}
     engines: {node: '>=16.17'}
 
+  expand-template@2.0.3:
+    resolution: {integrity: sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==}
+    engines: {node: '>=6'}
+
   exponential-backoff@3.1.1:
     resolution: {integrity: sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==}
 
@@ -1930,9 +2174,22 @@ packages:
   focus-trap@7.5.4:
     resolution: {integrity: sha512-N7kHdlgsO/v+iD/dMoJKtsSqs5Dz/dXZVebRgJw23LDk+jMi/974zyiOYDziY2JPp8xivq9BmUGwIJMiuSBi7w==}
 
+  follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
   foreground-child@3.1.1:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
     engines: {node: '>=14'}
+
+  form-data@4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
 
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
@@ -1940,6 +2197,9 @@ packages:
   fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
     engines: {node: '>= 0.6'}
+
+  fs-constants@1.0.0:
+    resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
 
   fs-extra@11.2.0:
     resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==}
@@ -2001,6 +2261,9 @@ packages:
 
   git-url-parse@14.0.0:
     resolution: {integrity: sha512-NnLweV+2A4nCvn4U/m2AoYu0pPKlsmhK9cknG7IMwsjFY1S2jxM+mAhsDxyxfCIGfGaD+dozsyX4b6vkYc83yQ==}
+
+  github-from-package@0.0.0:
+    resolution: {integrity: sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -2406,6 +2669,14 @@ packages:
     resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
     engines: {node: '>=8.6'}
 
+  mime-db@1.52.0:
+    resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
+    engines: {node: '>= 0.6'}
+
+  mime-types@2.1.35:
+    resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
+    engines: {node: '>= 0.6'}
+
   mime@1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
     engines: {node: '>=4'}
@@ -2429,6 +2700,10 @@ packages:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
 
+  mimic-response@3.1.0:
+    resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
+    engines: {node: '>=10'}
+
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -2439,6 +2714,9 @@ packages:
   minimatch@9.0.4:
     resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  minimist@1.2.8:
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
   minipass-collect@2.0.1:
     resolution: {integrity: sha512-D7V8PO9oaz7PWGLbCACuI1qEOsq7UKfLotx/C0Aet43fCUB/wfQ7DYeq2oR/svFJGYDHPr38SHATeaj/ZoKHKw==}
@@ -2485,6 +2763,9 @@ packages:
   mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
 
+  mkdirp-classic@0.5.3:
+    resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
+
   mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
@@ -2520,6 +2801,9 @@ packages:
     engines: {node: ^18 || >=20}
     hasBin: true
 
+  napi-build-utils@1.0.2:
+    resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
+
   negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
@@ -2533,6 +2817,10 @@ packages:
     peerDependenciesMeta:
       xml2js:
         optional: true
+
+  node-abi@3.65.0:
+    resolution: {integrity: sha512-ThjYBfoDNr08AWx6hGaRbfPwxKV9kVzAzOzlLKbk2CuqXE2xnCh+cbAGnwM3t8Lq4v9rUB7VfondlkBckcJrVA==}
+    engines: {node: '>=10'}
 
   node-addon-api@7.1.0:
     resolution: {integrity: sha512-mNcltoe1R8o7STTegSOHdnJNN7s5EUvhoS7ShnTHDyOSd+8H+UdWODq6qSv67PjC8Zc5JRT8+oLAMCr0SIXw7g==}
@@ -2938,6 +3226,11 @@ packages:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
     engines: {node: ^10 || ^12 || >=14}
 
+  prebuild-install@7.1.2:
+    resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -2976,6 +3269,12 @@ packages:
   protocols@2.0.1:
     resolution: {integrity: sha512-/XJ368cyBJ7fzLMwLKv1e4vLxOju2MNAIokcr7meSaNcVbWz/CPcW22cP04mwxOErdA5mwjA8Q6w/cdAQxVn7Q==}
 
+  proxy-from-env@1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+
+  pump@3.0.0:
+    resolution: {integrity: sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==}
+
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -2994,6 +3293,10 @@ packages:
 
   rc9@2.1.2:
     resolution: {integrity: sha512-btXCnMmRIBINM2LDZoEmOogIZU7Qe7zn4BpomSKZ/ykbLObuBdvG+mFq11DL6fjH1DRwHhrlgtYWG96bJiC7Cg==}
+
+  rc@1.2.8:
+    resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
+    hasBin: true
 
   readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
@@ -3137,6 +3440,12 @@ packages:
     resolution: {integrity: sha512-8G+/XDU8wNsJOQS5ysDVO0Etg9/2uA5gR9l4ZwijjlwxBcrU6RPfwi2+jJmbP+Ap1Hlp/nVAaEO4Fj22/SL2gQ==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
+  simple-concat@1.0.1:
+    resolution: {integrity: sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==}
+
+  simple-get@4.0.1:
+    resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
+
   simple-git@3.25.0:
     resolution: {integrity: sha512-KIY5sBnzc4yEcJXW7Tdv4viEz8KyG+nU0hay+DWZasvdFOYKeUZ6Xc25LUHHjw0tinPT7O1eY6pzX7pRT1K8rw==}
 
@@ -3254,6 +3563,10 @@ packages:
     resolution: {integrity: sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw==}
     engines: {node: '>=12'}
 
+  strip-json-comments@2.0.1:
+    resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
+    engines: {node: '>=0.10.0'}
+
   strip-literal@2.1.0:
     resolution: {integrity: sha512-Op+UycaUt/8FbN/Z2TWPBLge3jWrP3xj10f3fnYxf052bKuS3EKs1ZQcVGjnEMdsNVAM+plXRdmjrZ/KgG3Skw==}
 
@@ -3298,6 +3611,13 @@ packages:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
 
+  tar-fs@2.1.1:
+    resolution: {integrity: sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==}
+
+  tar-stream@2.2.0:
+    resolution: {integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==}
+    engines: {node: '>=6'}
+
   tar-stream@3.1.7:
     resolution: {integrity: sha512-qJj60CXt7IU1Ffyc3NJMjh6EkuCFej46zUqJ4J7pqYlThyd9bO0XBTmcOIhSzZJVWfsLks0+nle/j538YAW9RQ==}
 
@@ -3338,6 +3658,9 @@ packages:
   tuf-js@2.2.1:
     resolution: {integrity: sha512-GwIJau9XaA8nLVbUXsN3IlFi7WmQ48gBUrl3FTkkL/XLu/POhBzfmX9hd33FNMX1qAsfl6ozO1iMmW9NC8YniA==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  tunnel-agent@0.6.0:
+    resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
 
   type-fest@0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
@@ -4323,12 +4646,12 @@ snapshots:
 
   '@nuxt/devalue@2.0.2': {}
 
-  '@nuxt/devtools-kit@1.3.3(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))':
+  '@nuxt/devtools-kit@1.3.3(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))':
     dependencies:
       '@nuxt/kit': 3.12.0(rollup@4.18.0)
       '@nuxt/schema': 3.12.0(rollup@4.18.0)
       execa: 7.2.0
-      nuxt: 3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
+      nuxt: 3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
       vite: 5.2.13(@types/node@20.14.2)(terser@5.31.1)
     transitivePeerDependencies:
       - rollup
@@ -4347,13 +4670,13 @@ snapshots:
       rc9: 2.1.2
       semver: 7.6.2
 
-  '@nuxt/devtools@1.3.3(@unocss/reset@0.60.4)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)':
+  '@nuxt/devtools@1.3.3(@unocss/reset@0.60.4)(axios@1.7.2)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)':
     dependencies:
       '@antfu/utils': 0.7.8
-      '@nuxt/devtools-kit': 1.3.3(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
+      '@nuxt/devtools-kit': 1.3.3(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
       '@nuxt/devtools-wizard': 1.3.3
       '@nuxt/kit': 3.12.0(rollup@4.18.0)
-      '@vue/devtools-applet': 7.1.3(@unocss/reset@0.60.4)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)
+      '@vue/devtools-applet': 7.1.3(@unocss/reset@0.60.4)(axios@1.7.2)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)
       '@vue/devtools-core': 7.1.3(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)
       '@vue/devtools-kit': 7.1.3(vue@3.4.27)
       birpc: 0.2.17
@@ -4371,7 +4694,7 @@ snapshots:
       launch-editor: 2.6.1
       local-pkg: 0.5.0
       magicast: 0.3.4
-      nuxt: 3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
+      nuxt: 3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
       nypm: 0.3.8
       ohash: 1.1.3
       pacote: 18.0.6
@@ -4826,25 +5149,494 @@ snapshots:
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
+  '@syncfusion/ej2-barcode-generator@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+
   '@syncfusion/ej2-base@25.2.7':
     dependencies:
       '@syncfusion/ej2-icons': 25.2.3
 
+  '@syncfusion/ej2-base@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-icons': 26.1.35
+
+  '@syncfusion/ej2-buttons@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+
+  '@syncfusion/ej2-calendars@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-charts@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-excel-export': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+
+  '@syncfusion/ej2-circulargauge@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+
+  '@syncfusion/ej2-compression@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-file-utils': 26.1.35
+
+  '@syncfusion/ej2-data@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+
+  '@syncfusion/ej2-diagrams@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-documenteditor@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-file-utils': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-office-chart': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-drawings@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+
+  '@syncfusion/ej2-dropdowns@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-excel-export@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+
+  '@syncfusion/ej2-file-utils@26.1.35': {}
+
+  '@syncfusion/ej2-filemanager@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-layouts': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-gantt@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-layouts': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-richtexteditor': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+      '@syncfusion/ej2-treegrid': 26.1.35
+
+  '@syncfusion/ej2-grids@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-excel-export': 26.1.35
+      '@syncfusion/ej2-file-utils': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-heatmap@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-file-utils': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+
   '@syncfusion/ej2-icons@25.2.3': {}
+
+  '@syncfusion/ej2-icons@26.1.35': {}
+
+  '@syncfusion/ej2-image-editor@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-inplace-editor@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-richtexteditor': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-inputs@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-kanban@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-layouts': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@types/requirejs': 2.1.37
 
   '@syncfusion/ej2-layouts@25.2.3':
     dependencies:
       '@syncfusion/ej2-base': 25.2.7
 
+  '@syncfusion/ej2-layouts@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+
+  '@syncfusion/ej2-lineargauge@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+
+  '@syncfusion/ej2-lists@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-maps@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-file-utils': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+
+  '@syncfusion/ej2-multicolumn-combobox@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+
+  '@syncfusion/ej2-navigations@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-notifications@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-office-chart@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-charts': 26.1.35
+
+  '@syncfusion/ej2-pdf-export@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-compression': 26.1.35
+
+  '@syncfusion/ej2-pdf@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@types/node': 20.14.2
+
+  '@syncfusion/ej2-pdfviewer@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-drawings': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-inplace-editor': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-pdf': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-pivotview@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-charts': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-excel-export': 26.1.35
+      '@syncfusion/ej2-file-utils': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+
+  '@syncfusion/ej2-popups@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+
+  '@syncfusion/ej2-progressbar@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+      '@types/requirejs': 2.1.37
+
+  '@syncfusion/ej2-querybuilder@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-ribbon@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-richtexteditor@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-filemanager': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-schedule@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-excel-export': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@types/requirejs': 2.1.37
+
+  '@syncfusion/ej2-splitbuttons@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-spreadsheet@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-charts': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+
+  '@syncfusion/ej2-svg-base@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+
+  '@syncfusion/ej2-treegrid@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+
+  '@syncfusion/ej2-treemap@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-file-utils': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+
   '@syncfusion/ej2-vue-base@25.2.4':
     dependencies:
       '@syncfusion/ej2-base': 25.2.7
+
+  '@syncfusion/ej2-vue-base@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+
+  '@syncfusion/ej2-vue-buttons@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-vue-base': 26.1.35
+
+  '@syncfusion/ej2-vue-calendars@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-vue-base': 26.1.35
+
+  '@syncfusion/ej2-vue-dropdowns@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-vue-base': 26.1.35
+
+  '@syncfusion/ej2-vue-grids@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+      '@syncfusion/ej2-vue-base': 26.1.35
 
   '@syncfusion/ej2-vue-layouts@25.2.3':
     dependencies:
       '@syncfusion/ej2-base': 25.2.7
       '@syncfusion/ej2-layouts': 25.2.3
       '@syncfusion/ej2-vue-base': 25.2.4
+
+  '@syncfusion/ej2-vue-popups@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-vue-base': 26.1.35
+
+  '@syncfusion/ej2-vue-splitbuttons@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+      '@syncfusion/ej2-vue-base': 26.1.35
+
+  '@syncfusion/ej2@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-barcode-generator': 26.1.35
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-calendars': 26.1.35
+      '@syncfusion/ej2-charts': 26.1.35
+      '@syncfusion/ej2-circulargauge': 26.1.35
+      '@syncfusion/ej2-compression': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-diagrams': 26.1.35
+      '@syncfusion/ej2-documenteditor': 26.1.35
+      '@syncfusion/ej2-drawings': 26.1.35
+      '@syncfusion/ej2-dropdowns': 26.1.35
+      '@syncfusion/ej2-excel-export': 26.1.35
+      '@syncfusion/ej2-file-utils': 26.1.35
+      '@syncfusion/ej2-filemanager': 26.1.35
+      '@syncfusion/ej2-gantt': 26.1.35
+      '@syncfusion/ej2-grids': 26.1.35
+      '@syncfusion/ej2-heatmap': 26.1.35
+      '@syncfusion/ej2-icons': 26.1.35
+      '@syncfusion/ej2-image-editor': 26.1.35
+      '@syncfusion/ej2-inplace-editor': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.35
+      '@syncfusion/ej2-kanban': 26.1.35
+      '@syncfusion/ej2-layouts': 26.1.35
+      '@syncfusion/ej2-lineargauge': 26.1.35
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-maps': 26.1.35
+      '@syncfusion/ej2-multicolumn-combobox': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-office-chart': 26.1.35
+      '@syncfusion/ej2-pdf': 26.1.35
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-pdfviewer': 26.1.35
+      '@syncfusion/ej2-pivotview': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.35
+      '@syncfusion/ej2-progressbar': 26.1.35
+      '@syncfusion/ej2-querybuilder': 26.1.35
+      '@syncfusion/ej2-ribbon': 26.1.35
+      '@syncfusion/ej2-richtexteditor': 26.1.35
+      '@syncfusion/ej2-schedule': 26.1.35
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+      '@syncfusion/ej2-spreadsheet': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.35
+      '@syncfusion/ej2-treegrid': 26.1.35
+      '@syncfusion/ej2-treemap': 26.1.35
 
   '@trysound/sax@0.2.0': {}
 
@@ -4864,6 +5656,8 @@ snapshots:
   '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/requirejs@2.1.37': {}
 
   '@types/resolve@1.20.2': {}
 
@@ -5156,12 +5950,12 @@ snapshots:
 
   '@vue/devtools-api@6.6.3': {}
 
-  '@vue/devtools-applet@7.1.3(@unocss/reset@0.60.4)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)':
+  '@vue/devtools-applet@7.1.3(@unocss/reset@0.60.4)(axios@1.7.2)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)':
     dependencies:
       '@vue/devtools-core': 7.1.3(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)
       '@vue/devtools-kit': 7.1.3(vue@3.4.27)
       '@vue/devtools-shared': 7.2.1
-      '@vue/devtools-ui': 7.2.1(@unocss/reset@0.60.4)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vue@3.4.27)
+      '@vue/devtools-ui': 7.2.1(@unocss/reset@0.60.4)(axios@1.7.2)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vue@3.4.27)
       lodash-es: 4.17.21
       perfect-debounce: 1.0.0
       shiki: 1.3.0
@@ -5211,13 +6005,13 @@ snapshots:
     dependencies:
       rfdc: 1.3.1
 
-  '@vue/devtools-ui@7.2.1(@unocss/reset@0.60.4)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vue@3.4.27)':
+  '@vue/devtools-ui@7.2.1(@unocss/reset@0.60.4)(axios@1.7.2)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vue@3.4.27)':
     dependencies:
       '@unocss/reset': 0.60.4
       '@vue/devtools-shared': 7.2.1
       '@vueuse/components': 10.10.0(vue@3.4.27)
       '@vueuse/core': 10.10.0(vue@3.4.27)
-      '@vueuse/integrations': 10.10.0(focus-trap@7.5.4)(vue@3.4.27)
+      '@vueuse/integrations': 10.10.0(axios@1.7.2)(focus-trap@7.5.4)(vue@3.4.27)
       colord: 2.9.3
       floating-vue: 5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27)
       focus-trap: 7.5.4
@@ -5279,12 +6073,13 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@vueuse/integrations@10.10.0(focus-trap@7.5.4)(vue@3.4.27)':
+  '@vueuse/integrations@10.10.0(axios@1.7.2)(focus-trap@7.5.4)(vue@3.4.27)':
     dependencies:
       '@vueuse/core': 10.10.0(vue@3.4.27)
       '@vueuse/shared': 10.10.0(vue@3.4.27)
       vue-demi: 0.14.8(vue@3.4.27)
     optionalDependencies:
+      axios: 1.7.2
       focus-trap: 7.5.4
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -5408,6 +6203,8 @@ snapshots:
 
   async@3.2.5: {}
 
+  asynckit@0.4.0: {}
+
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.1
@@ -5418,6 +6215,14 @@ snapshots:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
+  axios@1.7.2:
+    dependencies:
+      follow-redirects: 1.15.6
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
   b4a@1.6.6: {}
 
   balanced-match@1.0.2: {}
@@ -5427,6 +6232,11 @@ snapshots:
 
   base64-js@1.5.1: {}
 
+  better-sqlite3@11.0.0:
+    dependencies:
+      bindings: 1.5.0
+      prebuild-install: 7.1.2
+
   binary-extensions@2.3.0: {}
 
   bindings@1.5.0:
@@ -5434,6 +6244,12 @@ snapshots:
       file-uri-to-path: 1.0.0
 
   birpc@0.2.17: {}
+
+  bl@4.1.0:
+    dependencies:
+      buffer: 5.7.1
+      inherits: 2.0.4
+      readable-stream: 3.6.2
 
   boolbase@1.0.0: {}
 
@@ -5460,6 +6276,11 @@ snapshots:
   buffer-crc32@1.0.0: {}
 
   buffer-from@1.1.2: {}
+
+  buffer@5.7.1:
+    dependencies:
+      base64-js: 1.5.1
+      ieee754: 1.2.1
 
   buffer@6.0.3:
     dependencies:
@@ -5540,6 +6361,8 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+  chownr@1.1.4: {}
+
   chownr@2.0.0: {}
 
   ci-info@4.0.0: {}
@@ -5583,6 +6406,10 @@ snapshots:
   colord@2.9.3: {}
 
   colorette@2.0.20: {}
+
+  combined-stream@1.0.8:
+    dependencies:
+      delayed-stream: 1.0.0
 
   commander@2.20.3: {}
 
@@ -5713,7 +6540,9 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  db0@0.1.4: {}
+  db0@0.1.4(better-sqlite3@11.0.0):
+    optionalDependencies:
+      better-sqlite3: 11.0.0
 
   debug@2.6.9:
     dependencies:
@@ -5722,6 +6551,12 @@ snapshots:
   debug@4.3.5:
     dependencies:
       ms: 2.1.2
+
+  decompress-response@6.0.0:
+    dependencies:
+      mimic-response: 3.1.0
+
+  deep-extend@0.6.0: {}
 
   deepmerge@4.3.1: {}
 
@@ -5737,6 +6572,8 @@ snapshots:
   define-lazy-prop@3.0.0: {}
 
   defu@6.1.4: {}
+
+  delayed-stream@1.0.0: {}
 
   delegates@1.0.0: {}
 
@@ -5798,6 +6635,10 @@ snapshots:
     dependencies:
       iconv-lite: 0.6.3
     optional: true
+
+  end-of-stream@1.4.4:
+    dependencies:
+      once: 1.4.0
 
   enhanced-resolve@5.17.0:
     dependencies:
@@ -5920,6 +6761,8 @@ snapshots:
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
 
+  expand-template@2.0.3: {}
+
   exponential-backoff@3.1.1: {}
 
   externality@1.0.2:
@@ -5968,14 +6811,24 @@ snapshots:
     dependencies:
       tabbable: 6.2.0
 
+  follow-redirects@1.15.6: {}
+
   foreground-child@3.1.1:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
+  form-data@4.0.0:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+
   fraction.js@4.3.7: {}
 
   fresh@0.5.2: {}
+
+  fs-constants@1.0.0: {}
 
   fs-extra@11.2.0:
     dependencies:
@@ -6041,6 +6894,8 @@ snapshots:
   git-url-parse@14.0.0:
     dependencies:
       git-up: 7.0.0
+
+  github-from-package@0.0.0: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -6449,6 +7304,12 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.1
 
+  mime-db@1.52.0: {}
+
+  mime-types@2.1.35:
+    dependencies:
+      mime-db: 1.52.0
+
   mime@1.6.0: {}
 
   mime@3.0.0: {}
@@ -6458,6 +7319,8 @@ snapshots:
   mimic-fn@2.1.0: {}
 
   mimic-fn@4.0.0: {}
+
+  mimic-response@3.1.0: {}
 
   minimatch@3.1.2:
     dependencies:
@@ -6470,6 +7333,8 @@ snapshots:
   minimatch@9.0.4:
     dependencies:
       brace-expansion: 2.0.1
+
+  minimist@1.2.8: {}
 
   minipass-collect@2.0.1:
     dependencies:
@@ -6517,6 +7382,8 @@ snapshots:
 
   mitt@3.0.1: {}
 
+  mkdirp-classic@0.5.3: {}
+
   mkdirp@1.0.4: {}
 
   mlly@1.7.1:
@@ -6540,9 +7407,11 @@ snapshots:
 
   nanoid@5.0.7: {}
 
+  napi-build-utils@1.0.2: {}
+
   negotiator@0.6.3: {}
 
-  nitropack@2.9.6(@opentelemetry/api@1.9.0)(encoding@0.1.13):
+  nitropack@2.9.6(@opentelemetry/api@1.9.0)(better-sqlite3@11.0.0)(encoding@0.1.13):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.2
       '@netlify/functions': 2.7.0(@opentelemetry/api@1.9.0)
@@ -6565,7 +7434,7 @@ snapshots:
       cookie-es: 1.1.0
       croner: 8.0.2
       crossws: 0.2.4
-      db0: 0.1.4
+      db0: 0.1.4(better-sqlite3@11.0.0)
       defu: 6.1.4
       destr: 2.0.3
       dot-prop: 8.0.2
@@ -6631,6 +7500,10 @@ snapshots:
       - idb-keyval
       - supports-color
       - uWebSockets.js
+
+  node-abi@3.65.0:
+    dependencies:
+      semver: 7.6.2
 
   node-addon-api@7.1.0: {}
 
@@ -6746,10 +7619,10 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)):
+  nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)):
     dependencies:
       '@nuxt/devalue': 2.0.2
-      '@nuxt/devtools': 1.3.3(@unocss/reset@0.60.4)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)
+      '@nuxt/devtools': 1.3.3(@unocss/reset@0.60.4)(axios@1.7.2)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(nuxt@3.12.0(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.2)(@unocss/reset@0.60.4)(axios@1.7.2)(better-sqlite3@11.0.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(terser@5.31.1)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(rollup@4.18.0)(unocss@0.60.4(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)))(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.27)
       '@nuxt/kit': 3.12.0(rollup@4.18.0)
       '@nuxt/schema': 3.12.0(rollup@4.18.0)
       '@nuxt/telemetry': 2.5.4(rollup@4.18.0)
@@ -6778,7 +7651,7 @@ snapshots:
       knitwork: 1.1.0
       magic-string: 0.30.10
       mlly: 1.7.1
-      nitropack: 2.9.6(@opentelemetry/api@1.9.0)(encoding@0.1.13)
+      nitropack: 2.9.6(@opentelemetry/api@1.9.0)(better-sqlite3@11.0.0)(encoding@0.1.13)
       nuxi: 3.11.1
       nypm: 0.3.8
       ofetch: 1.3.4
@@ -7161,6 +8034,21 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
+  prebuild-install@7.1.2:
+    dependencies:
+      detect-libc: 2.0.3
+      expand-template: 2.0.3
+      github-from-package: 0.0.0
+      minimist: 1.2.8
+      mkdirp-classic: 0.5.3
+      napi-build-utils: 1.0.2
+      node-abi: 3.65.0
+      pump: 3.0.0
+      rc: 1.2.8
+      simple-get: 4.0.1
+      tar-fs: 2.1.1
+      tunnel-agent: 0.6.0
+
   pretty-bytes@6.1.1: {}
 
   proc-log@3.0.0: {}
@@ -7185,6 +8073,13 @@ snapshots:
 
   protocols@2.0.1: {}
 
+  proxy-from-env@1.1.0: {}
+
+  pump@3.0.0:
+    dependencies:
+      end-of-stream: 1.4.4
+      once: 1.4.0
+
   queue-microtask@1.2.3: {}
 
   queue-tick@1.0.1: {}
@@ -7201,6 +8096,13 @@ snapshots:
     dependencies:
       defu: 6.1.4
       destr: 2.0.3
+
+  rc@1.2.8:
+    dependencies:
+      deep-extend: 0.6.0
+      ini: 1.3.8
+      minimist: 1.2.8
+      strip-json-comments: 2.0.1
 
   readable-stream@2.3.8:
     dependencies:
@@ -7376,6 +8278,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  simple-concat@1.0.1: {}
+
+  simple-get@4.0.1:
+    dependencies:
+      decompress-response: 6.0.0
+      once: 1.4.0
+      simple-concat: 1.0.1
+
   simple-git@3.25.0:
     dependencies:
       '@kwsites/file-exists': 1.1.1
@@ -7494,6 +8404,8 @@ snapshots:
 
   strip-final-newline@3.0.0: {}
 
+  strip-json-comments@2.0.1: {}
+
   strip-literal@2.1.0:
     dependencies:
       js-tokens: 9.0.0
@@ -7533,6 +8445,21 @@ snapshots:
   tabbable@6.2.0: {}
 
   tapable@2.2.1: {}
+
+  tar-fs@2.1.1:
+    dependencies:
+      chownr: 1.1.4
+      mkdirp-classic: 0.5.3
+      pump: 3.0.0
+      tar-stream: 2.2.0
+
+  tar-stream@2.2.0:
+    dependencies:
+      bl: 4.1.0
+      end-of-stream: 1.4.4
+      fs-constants: 1.0.0
+      inherits: 2.0.4
+      readable-stream: 3.6.2
 
   tar-stream@3.1.7:
     dependencies:
@@ -7581,6 +8508,10 @@ snapshots:
       make-fetch-happen: 13.0.1
     transitivePeerDependencies:
       - supports-color
+
+  tunnel-agent@0.6.0:
+    dependencies:
+      safe-buffer: 5.2.1
 
   type-fest@0.21.3: {}
 

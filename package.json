@@ -10,10 +10,24 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@syncfusion/ej2-base": "^25.2.7",
-    "@syncfusion/ej2-vue-layouts": "^25.2.3",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@syncfusion/ej2": "^26.1.35",
+    "@syncfusion/ej2-base": "^25.2.7",
+    "@syncfusion/ej2-data": "^26.1.35",
+    "@syncfusion/ej2-grids": "^26.1.35",
+    "@syncfusion/ej2-vue-buttons": "^26.1.35",
+    "@syncfusion/ej2-vue-calendars": "^26.1.35",
+    "@syncfusion/ej2-vue-dropdowns": "^26.1.35",
+    "@syncfusion/ej2-vue-grids": "^26.1.35",
+    "@syncfusion/ej2-vue-layouts": "^25.2.3",
+    "@syncfusion/ej2-vue-popups": "^26.1.35",
+    "@syncfusion/ej2-vue-splitbuttons": "^26.1.35",
+    "axios": "^1.7.2",
+    "better-sqlite3": "^11.0.0",
+    "floating-vue": "^5.2.2"
   }
 }
