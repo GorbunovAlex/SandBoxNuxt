@@ -6,7 +6,7 @@ export default function useGridPresenter() {
     const pageOptions = {
         pageCount: 4,
         pageSizes: [50, 100, 200, 500],
-        pageSize: 50,
+        pageSize: 0,
     };
 
     const filterOptions: FilterSettingsModel = {
@@ -20,6 +20,14 @@ export default function useGridPresenter() {
         // setting this to true currently prevents the grid from marking the first row as selected on grid load
         // persistSelection: true,
     };
+
+    const contextMenuItems = [
+        'Delete',
+        'Edit',
+        'Save',
+        'Cancel',
+        'Update',
+    ]
 
     function setEjsGridFormat(dataType: string) {
         if (dataType === 'datetime') {
@@ -43,6 +51,7 @@ export default function useGridPresenter() {
         pageOptions,
         filterOptions,
         selectionOptions,
+        contextMenuItems,
 
         setEjsGridFormat
     }

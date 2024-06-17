@@ -142,6 +142,150 @@ export default defineEventHandler((event) => {
                'en': 'E',
                'de': 'B',
            },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
+       },{
+           'field': 'edited',
+           'data_type': 'string',
+           'is_visible': true,
+           'name_long': {
+               'en': 'Edited',
+               'de': 'Bearbeitet',
+           },
+           'name_short': {
+               'en': 'E',
+               'de': 'B',
+           },
        },
    ]
 })

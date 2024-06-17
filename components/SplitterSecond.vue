@@ -1,6 +1,23 @@
 <script setup lang="ts">
-import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
-import { Page } from "@syncfusion/ej2-grids"
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, type LoadEventArgs, type ContextMenuItem, type ContextMenuItemModel } from '@syncfusion/ej2-vue-grids';
+import { Sort,
+  Edit,
+  Group,
+  Freeze,
+  Search,
+  Reorder,
+  Aggregate,
+  ColumnMenu,
+  ExcelExport,
+  ContextMenu,
+  ColumnChooser,
+  VirtualScroll,
+  RowDD,
+  Selection,
+  Toolbar,
+  Page,
+  Resize,
+  Filter, } from "@syncfusion/ej2-grids"
 import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
 
 import type { IMeta} from "~/helpers/types";
@@ -8,7 +25,24 @@ import useGridPresenter from "~/composables/useGridPresenter";
 import usePolling from "~/composables/usePolling";
 
 provide('grid', [
-  Page
+  Page,
+  Sort,
+  Edit,
+  RowDD,
+  Group,
+  Search,
+  Resize,
+  Filter,
+  Freeze,
+  Reorder,
+  Selection,
+  Aggregate,
+  ColumnMenu,
+  ExcelExport,
+  ContextMenu,
+  ColumnChooser,
+  VirtualScroll,
+  Toolbar,
 ])
 
 const meta = reactive<IMeta[]>([]);
@@ -42,7 +76,13 @@ async function getMetaData() {
 // }
 
 const peopleGrid = ref<EjsGrid | null>(null)
-const { pageOptions, filterOptions, selectionOptions, selectedRow, setEjsGridFormat } = useGridPresenter();
+const { pageOptions, filterOptions, selectionOptions, selectedRow, setEjsGridFormat, contextMenuItems } = useGridPresenter();
+function load(args: LoadEventArgs) {
+  if (peopleGrid.value) {
+    peopleGrid.value?.$el.addEventListener('keydown', console.log(args));
+  }
+};
+
 
 const { refetchData, indicator } = usePolling()
 async function refetch() {
@@ -66,15 +106,26 @@ onBeforeMount(async () => {
         ref="peopleGrid"
         data-cy="program-book-casting-sequence-grid"
         height="100%"
-        :allow-paging="true"
+        :allowPaging="true"
+        :allowResizing="true"
+        :allowSelection="true"
+        :allowGrouping="false"
+        :allowSorting="true"
+        :allowMultiSorting="true"
+        :autoFit="true"
+        :allowReordering="false"
+        :enablePersistence="true"
+        :allowRowDragAndDrop="true"
         :data-source="dataSource"
         :enable-sticky-header="true"
-        :allow-sorting="true"
         :page-settings="pageOptions"
         :filter-settings="filterOptions"
-        :allow-selection="true"
+        :allowFiltering="true"
         :selection-settings="selectionOptions"
         :selected-row-index="selectedRow"
+        :load="load"
+        :rowHeight="20"
+        :contextMenuItems="contextMenuItems as (ContextMenuItem[] | ContextMenuItemModel[])"
         grid-lines="Both"
     >
       <EColumns>
