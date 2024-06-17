@@ -35,7 +35,7 @@ jobs:
         id: detect-package-manager
         run: |
           if [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
-            exho "curl -fsSL https://get.pnpm.io/install.sh | sh -" >> $GITHUB_OUTPUT
+            echo "curl -fsSL https://get.pnpm.io/install.sh | sh -" >> $GITHUB_OUTPUT
             echo "manager=pnpm" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             exit 0
