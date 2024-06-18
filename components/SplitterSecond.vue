@@ -97,6 +97,11 @@ onBeforeMount(async () => {
   refetchData(refetch)
 });
 
+
+function onDataBound() {
+  console.log("!")
+}
+
 </script>
 
 <template>
@@ -126,6 +131,7 @@ onBeforeMount(async () => {
         :load="load"
         :rowHeight="20"
         :contextMenuItems="contextMenuItems as (ContextMenuItem[] | ContextMenuItemModel[])"
+        :data-bound="onDataBound"
         grid-lines="Both"
     >
       <EColumns>
