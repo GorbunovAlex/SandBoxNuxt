@@ -44,6 +44,10 @@ onBeforeMount(async () => {
   refetchData(getData)
 });
 
+function onDataBound() {
+  console.log("data bound in splitter one component")
+}
+
 </script>
 
 <template>
@@ -62,6 +66,7 @@ onBeforeMount(async () => {
       :allow-selection="true"
       :selection-settings="selectionOptions"
       :selected-row-index="selectedRow"
+      :data-bound="onDataBound"
       grid-lines="Both"
   >
     <EColumns>

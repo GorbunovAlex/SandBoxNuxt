@@ -99,7 +99,7 @@ onBeforeMount(async () => {
 
 
 function onDataBound() {
-  console.log("!")
+  console.log("data bound in splitter seconds component")
 }
 
 </script>
