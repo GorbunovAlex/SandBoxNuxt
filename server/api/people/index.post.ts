@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
         const db = useDatabase();
         const body = await readBody(event);
         const data = body as BodyData
-        const { rows } = await db.sql`SELECT * FROM characters LIMIT ${data.take} OFFSET ${data.skip}`;
+        const { rows } = await db.sql`SELECT * FROM persons LIMIT ${data.take} OFFSET ${data.skip}`;
         const { rows:count} = await db.sql`SELECT COUNT(*) FROM characters`;
         if (rows && count) {
             return {

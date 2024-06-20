@@ -39,7 +39,7 @@ const someSwitching = ref(false);
               <SplitterOne />
             </template>
           </Epane>
-          <Epane :content="'content2'" :size="'100px'" :min="'10px'" >
+          <Epane :content="'content2'" :size="'700px'" :min="'10px'" >
             <template #content2>
               <SplitterSecond />
             </template>

@@ -1,13 +1,43 @@
 <script setup lang="ts">
 import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
-import { Page } from "@syncfusion/ej2-grids"
+import {
+  Aggregate, ColumnChooser, ColumnMenu, ContextMenu,
+  Edit, ExcelExport,
+  Filter,
+  Freeze,
+  Group,
+  Page,
+  Reorder,
+  Resize,
+  RowDD,
+  Search,
+  Selection,
+  Sort, Toolbar, VirtualScroll
+} from "@syncfusion/ej2-grids"
 
 import type { IMeta} from "~/helpers/types";
 import useGridPresenter from "~/composables/useGridPresenter";
 import usePolling from "~/composables/usePolling";
 
 provide('grid', [
-  Page
+  Page,
+  Sort,
+  Edit,
+  RowDD,
+  Group,
+  Search,
+  Resize,
+  Filter,
+  Freeze,
+  Reorder,
+  Selection,
+  Aggregate,
+  ColumnMenu,
+  ExcelExport,
+  ContextMenu,
+  ColumnChooser,
+  VirtualScroll,
+  Toolbar,
 ])
 
 const meta = reactive<IMeta[]>([]);
@@ -45,7 +75,7 @@ onBeforeMount(async () => {
 });
 
 function onDataBound() {
-  console.log("data bound in splitter one component")
+  // console.log("data bound in splitter one component")
 }
 
 </script>

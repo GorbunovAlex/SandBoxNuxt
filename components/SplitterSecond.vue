@@ -94,9 +94,20 @@ const dataSource = new DataManager({
 })
 onBeforeMount(async () => {
   await Promise.all([getMetaData()])
-  refetchData(refetch)
+  // refetchData(refetch)
 });
 
+function onLoad() {
+  console.log('on loaded')
+}
+
+function onCreated() {
+  console.log('on created')
+}
+
+function onBeforeDataBound() {
+  console.log('on before data bound')
+}
 
 function onDataBound() {
   console.log("data bound in splitter seconds component")
@@ -128,9 +139,11 @@ function onDataBound() {
         :allowFiltering="true"
         :selection-settings="selectionOptions"
         :selected-row-index="selectedRow"
-        :load="load"
         :rowHeight="20"
         :contextMenuItems="contextMenuItems as (ContextMenuItem[] | ContextMenuItemModel[])"
+        :load="onLoad"
+        :created="onCreated"
+        :before-data-bound="onBeforeDataBound"
         :data-bound="onDataBound"
         grid-lines="Both"
     >
