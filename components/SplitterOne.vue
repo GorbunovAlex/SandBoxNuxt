@@ -17,7 +17,7 @@ import {
 
 import type { IMeta} from "~/helpers/types";
 import useGridPresenter from "~/composables/useGridPresenter";
-import usePolling from "~/composables/usePolling";
+// import usePolling from "~/composables/usePolling";
 
 provide('grid', [
   Page,
@@ -68,10 +68,10 @@ async function getData() {
 }
 
 const { pageOptions, filterOptions, selectionOptions, selectedRow, setEjsGridFormat } = useGridPresenter();
-const { refetchData, indicator } = usePolling()
+// const { refetchData, indicator } = usePolling()
 onBeforeMount(async () => {
   await Promise.all([getMetaData(), getData()])
-  refetchData(getData)
+  // refetchData(getData)
 });
 
 function onDataBound() {

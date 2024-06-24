@@ -22,7 +22,7 @@ import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
 
 import type { IMeta} from "~/helpers/types";
 import useGridPresenter from "~/composables/useGridPresenter";
-import usePolling from "~/composables/usePolling";
+import Refetcher from "~/composables/usePolling";
 
 provide('grid', [
   Page,
@@ -84,7 +84,6 @@ function load(args: LoadEventArgs) {
 };
 
 
-const { refetchData, indicator } = usePolling()
 async function refetch() {
   await peopleGrid.value?.refresh();
 }
@@ -94,7 +93,7 @@ const dataSource = new DataManager({
 })
 onBeforeMount(async () => {
   await Promise.all([getMetaData()])
-  // refetchData(refetch)
+  Refetcher.instance(refetch)
 });
 
 function onLoad() {

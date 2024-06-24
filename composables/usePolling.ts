@@ -1,24 +1,24 @@
-export default function usePolling() {
-    const indicator = ref(false)
+export default class Refetcher {
+    static #instance: Refetcher;
 
-    const timer = ref<NodeJS.Timeout | null>(null)
-    const timeOutIds = ref([]);
 
-    function refetchData(refetchFunction: () => Promise<void>) {
-        timer.value = setTimeout(async () => {
-            indicator.value = true;
-            await refetchFunction()
-            indicator.value = false
-            refetchData(refetchFunction)
-        }, 10000);
+    private constructor(refetchFunction: () => Promise<void>) {
+        Refetcher.refetch(refetchFunction);
     }
 
-    onUnmounted(() => {
-        if (timer.value !== null) clearTimeout(timer.value)
-    });
 
-    return {
-        indicator,
-        refetchData
+    public static instance(refetchFunction: () => Promise<void>): Refetcher {
+        if (!Refetcher.#instance) {
+            Refetcher.#instance = new Refetcher(refetchFunction);
+        }
+
+        return Refetcher.#instance;
+    }
+
+    private static refetch(refetchFunction: () => Promise<void>) {
+        return setTimeout(async () => {
+            await refetchFunction();
+            this.refetch(refetchFunction);
+        }, 10000)
     }
 }

@@ -17,7 +17,7 @@ import {
 
 import type { IMeta } from "~/helpers/types";
 import useGridPresenter from "~/composables/useGridPresenter";
-import usePolling from "~/composables/usePolling";
+// import usePolling from "~/composables/usePolling";
 import {DataManager, UrlAdaptor} from "@syncfusion/ej2-data";
 
 provide('grid', [
@@ -74,7 +74,7 @@ async function getMetaData() {
 const planetsGrid = ref<EjsGrid | null>(null)
 const { pageOptions, filterOptions, selectionOptions, selectedRow, setEjsGridFormat } = useGridPresenter();
 
-const { refetchData, indicator } = usePolling()
+// const { refetchData, indicator } = usePolling()
 async function refetch() {
   await planetsGrid.value?.refresh();
 }
@@ -84,7 +84,7 @@ const dataSource = new DataManager({
 })
 onBeforeMount(async () => {
   await Promise.all([getMetaData()])
-  refetchData(refetch)
+  // refetchData(refetch)
 });
 
 </script>
