@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   },
   ssr: false,
   modules: [
-    'floating-vue/nuxt'
+    'floating-vue/nuxt',
+    '@pinia/nuxt'
   ],
   nitro: {
     experimental: {

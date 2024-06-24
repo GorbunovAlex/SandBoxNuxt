@@ -18,6 +18,9 @@ importers:
         specifier: ^4.3.2
         version: 4.3.3(vue@3.4.27)
     devDependencies:
+      '@pinia/nuxt':
+        specifier: ^0.5.1
+        version: 0.5.1(rollup@4.18.0)(vue@3.4.27)
       '@syncfusion/ej2':
         specifier: ^26.1.35
         version: 26.1.35
@@ -45,6 +48,9 @@ importers:
       '@syncfusion/ej2-vue-layouts':
         specifier: ^25.2.3
         version: 25.2.3
+      '@syncfusion/ej2-vue-notifications':
+        specifier: ^26.1.35
+        version: 26.1.35
       '@syncfusion/ej2-vue-popups':
         specifier: ^26.1.35
         version: 26.1.35
@@ -60,6 +66,9 @@ importers:
       floating-vue:
         specifier: ^5.2.2
         version: 5.2.2(@nuxt/kit@3.12.0(rollup@4.18.0))(vue@3.4.27)
+      pinia:
+        specifier: ^2.1.7
+        version: 2.1.7(vue@3.4.27)
 
 packages:
 
@@ -842,6 +851,9 @@ packages:
     resolution: {integrity: sha512-HNjmfLQEVRZmHRET336f20H/8kOozUGwk7yajvsonjNxbj2wBTK1WsQuHkD5yYh9RxFGL2EyDHryOihOwUoKDA==}
     engines: {node: '>= 10.0.0'}
 
+  '@pinia/nuxt@0.5.1':
+    resolution: {integrity: sha512-6wT6TqY81n+7/x3Yhf0yfaJVKkZU42AGqOR0T3+UvChcaOJhSma7OWPN64v+ptYlznat+fS1VTwNAcbi2lzHnw==}
+
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
@@ -1205,6 +1217,9 @@ packages:
 
   '@syncfusion/ej2-vue-layouts@25.2.3':
     resolution: {integrity: sha512-jkw/a5Msg6TKM5XHj+krO59mW03A9uAOYEzXvrK4taLXczS0Sif4qUnXe3S/TnEl3JAzffJiFnwzNg3fWXbs4w==}
+
+  '@syncfusion/ej2-vue-notifications@26.1.35':
+    resolution: {integrity: sha512-UWzMwEBOITKXBHjDt40YUcMsUgRN3yFUE/ZDOo6rlu6mi9xWgt5Slg2b/7rRq3IEEYkQhvfQAdyvoWau2un/KQ==}
 
   '@syncfusion/ej2-vue-popups@26.1.35':
     resolution: {integrity: sha512-+ghkQpmiZCThi/FMkzL0MqdCpJDKRSSeuiEgeiRDGF7se02VidFO2q2ZkKoBXLfUwCZNV3UQ5bWuLy0TaQVXVQ==}
@@ -3049,6 +3064,18 @@ packages:
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  pinia@2.1.7:
+    resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.3.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
 
   pkg-types@1.1.1:
     resolution: {integrity: sha512-ko14TjmDuQJ14zsotODv7dBlwxKhUKQEhuhmbqo1uCi9BB0Z2alo/wAXg6q1dTR5TyuqYyWhjtfe/Tsh+X28jQ==}
@@ -4990,6 +5017,17 @@ snapshots:
       '@parcel/watcher-win32-ia32': 2.4.1
       '@parcel/watcher-win32-x64': 2.4.1
 
+  '@pinia/nuxt@0.5.1(rollup@4.18.0)(vue@3.4.27)':
+    dependencies:
+      '@nuxt/kit': 3.12.0(rollup@4.18.0)
+      pinia: 2.1.7(vue@3.4.27)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - rollup
+      - supports-color
+      - typescript
+      - vue
+
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
@@ -5576,6 +5614,12 @@ snapshots:
       '@syncfusion/ej2-base': 25.2.7
       '@syncfusion/ej2-layouts': 25.2.3
       '@syncfusion/ej2-vue-base': 25.2.4
+
+  '@syncfusion/ej2-vue-notifications@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.35
+      '@syncfusion/ej2-notifications': 26.1.35
+      '@syncfusion/ej2-vue-base': 26.1.35
 
   '@syncfusion/ej2-vue-popups@26.1.35':
     dependencies:
@@ -7867,6 +7911,12 @@ snapshots:
   picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
+
+  pinia@2.1.7(vue@3.4.27):
+    dependencies:
+      '@vue/devtools-api': 6.6.3
+      vue: 3.4.27
+      vue-demi: 0.14.8(vue@3.4.27)
 
   pkg-types@1.1.1:
     dependencies:

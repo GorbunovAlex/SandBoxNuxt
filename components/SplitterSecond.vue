@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, type LoadEventArgs, type ContextMenuItem, type ContextMenuItemModel } from '@syncfusion/ej2-vue-grids';
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, type LoadEventArgs, type ContextMenuItem, type ContextMenuItemModel, type ContextMenuClickEventArgs } from '@syncfusion/ej2-vue-grids';
+import { ToastComponent as EjsToast } from "@syncfusion/ej2-vue-notifications";
 import { Sort,
   Edit,
   Group,
@@ -23,6 +24,7 @@ import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
 import type { IMeta} from "~/helpers/types";
 import useGridPresenter from "~/composables/useGridPresenter";
 import Refetcher from "~/composables/usePolling";
+import {useSwitch} from "~/store/switchStore";
 
 provide('grid', [
   Page,
@@ -54,29 +56,8 @@ async function getMetaData() {
   }
 }
 
-// interface ICharacter {
-//   birth_year: string;
-//   eye_color: string;
-//   gender: string;
-//   hair_color: string;
-//   height: string;
-//   homeworld: string;
-//   mass: string;
-//   name: string;
-//   skin_color: string;
-//   created: string;
-//   edited: string;
-// }
-// const data = ref<ICharacter[]>([]);
-// async function getData() {
-//   const resp = await $fetch<ICharacter[]>('/api/people')
-//   if (resp) {
-//    data.value = resp
-//   }
-// }
-
 const peopleGrid = ref<EjsGrid | null>(null)
-const { pageOptions, filterOptions, selectionOptions, selectedRow, setEjsGridFormat, contextMenuItems } = useGridPresenter();
+const { pageOptions, filterOptions, selectionOptions, selectedRow, contextMenuItemsBase, setEjsGridFormat } = useGridPresenter();
 function load(args: LoadEventArgs) {
   if (peopleGrid.value) {
     peopleGrid.value?.$el.addEventListener('keydown', console.log(args));
@@ -96,20 +77,33 @@ onBeforeMount(async () => {
   Refetcher.instance(refetch)
 });
 
-function onLoad() {
-  console.log('on loaded')
+const contextMenuItems = ref<ContextMenuItemModel[]>([])
+const contextMenuItemsAnother: ContextMenuItemModel[] = [
+  {
+    text: "Click context another",
+    target: '.e-content',
+    id: 'click',
+    iconCss: 'e-icons e-people',
+  },
+]
+const switchStore = useSwitch();
+const isSwitch = computed(() => switchStore.someSwitching)
+watch(isSwitch, () => {
+  contextMenuItems.value = isSwitch.value ? contextMenuItemsAnother : contextMenuItemsBase
+}, { immediate: true })
+function contextMenuClickHandler(args: ContextMenuClickEventArgs) {
+  const itemId = args.item.id;
+  if (itemId === 'click') {
+    invokeToast();
+  }
 }
 
-function onCreated() {
-  console.log('on created')
-}
-
-function onBeforeDataBound() {
-  console.log('on before data bound')
-}
-
-function onDataBound() {
-  console.log("data bound in splitter seconds component")
+const toastComponent = ref<EjsToast | null>(null)
+function invokeToast() {
+  if (toastComponent.value) {
+    console.log("Invoked toast")
+    toastComponent.value.show();
+  }
 }
 
 </script>
@@ -139,11 +133,8 @@ function onDataBound() {
         :selection-settings="selectionOptions"
         :selected-row-index="selectedRow"
         :rowHeight="20"
-        :contextMenuItems="contextMenuItems as (ContextMenuItem[] | ContextMenuItemModel[])"
-        :load="onLoad"
-        :created="onCreated"
-        :before-data-bound="onBeforeDataBound"
-        :data-bound="onDataBound"
+        :contextMenuItems="contextMenuItems"
+        :context-menu-click="contextMenuClickHandler"
         grid-lines="Both"
     >
       <EColumns>
@@ -174,6 +165,13 @@ function onDataBound() {
         </div>
       </template>
     </EjsGrid>
+    <ejs-toast
+        :showCloseButton="true"
+        :position="{ X: 'Right', Y: 'Top' }"
+        ref='toastComponent'
+        title='Matt sent you a friend request'
+        content='Hey, wanna dress up as wizards and ride our hoverboards?'
+    />
   </div>
 </template>
 

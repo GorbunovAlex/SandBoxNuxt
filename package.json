@@ -15,6 +15,7 @@
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "@syncfusion/ej2": "^26.1.35",
     "@syncfusion/ej2-base": "^25.2.7",
     "@syncfusion/ej2-data": "^26.1.35",
@@ -24,10 +25,12 @@
     "@syncfusion/ej2-vue-dropdowns": "^26.1.35",
     "@syncfusion/ej2-vue-grids": "^26.1.35",
     "@syncfusion/ej2-vue-layouts": "^25.2.3",
+    "@syncfusion/ej2-vue-notifications": "^26.1.35",
     "@syncfusion/ej2-vue-popups": "^26.1.35",
     "@syncfusion/ej2-vue-splitbuttons": "^26.1.35",
     "axios": "^1.7.2",
     "better-sqlite3": "^11.0.0",
-    "floating-vue": "^5.2.2"
+    "floating-vue": "^5.2.2",
+    "pinia": "^2.1.7"
   }
 }

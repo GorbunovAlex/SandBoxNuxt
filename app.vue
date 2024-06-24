@@ -5,8 +5,12 @@ import { registerLicense } from '@syncfusion/ej2-base';
 import SplitterOne from './components/SplitterOne.vue';
 import SplitterSecond from './components/SplitterSecond.vue';
 import SplitterThird from './components/SplitterThird.vue';
+import {useSwitch} from "~/store/switchStore";
 
 registerLicense(import.meta.env.VITE_SF_KEY);
+
+const switchStore = useSwitch();
+const someSwitching = computed(() => switchStore.someSwitching)
 
 const counter = ref(10);
 function tenSecondsReverseCounter() {
@@ -23,13 +27,12 @@ onMounted(() => {
   tenSecondsReverseCounter();
 })
 
-const someSwitching = ref(false);
 </script>
 
 <template>
   <div class="main">
     <div class="submain">
-      <button @click="someSwitching = !someSwitching">Switch</button>
+      <button @click="switchStore.someSwitching = !switchStore.someSwitching">Switch</button>
       {{someSwitching}}
       {{counter}}
       <EjsSplitter  id='default-splitter' :orientation="'Vertical'">
@@ -57,6 +60,7 @@ const someSwitching = ref(false);
 
 <style>
 @import "./node_modules/@syncfusion/ej2/material3.css";
+@import "./node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
 @import "assets/main.css";
 
 .main {

@@ -21,12 +21,13 @@ export default function useGridPresenter() {
         // persistSelection: true,
     };
 
-    const contextMenuItems = [
-        'Delete',
-        'Edit',
-        'Save',
-        'Cancel',
-        'Update',
+    const contextMenuItemsBase = [
+        {
+            text: "Click context",
+            target: '.e-content',
+            id: 'click',
+            iconCss: 'e-icons e-video',
+        },
     ]
 
     function setEjsGridFormat(dataType: string) {
@@ -51,7 +52,7 @@ export default function useGridPresenter() {
         pageOptions,
         filterOptions,
         selectionOptions,
-        contextMenuItems,
+        contextMenuItemsBase,
 
         setEjsGridFormat
     }
