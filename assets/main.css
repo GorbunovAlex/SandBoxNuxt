@@ -1,3 +1,5 @@
+@import url(tachyons);
+
 body {
     height: 100vh;
     width: 100vw;
